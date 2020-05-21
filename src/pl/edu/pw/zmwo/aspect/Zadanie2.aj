@@ -9,7 +9,6 @@ import org.json.simple.JSONObject;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
 
 public aspect Zadanie2 {
 
@@ -21,10 +20,17 @@ public aspect Zadanie2 {
 
     Repository loadRepo() {
         try {
-            return gson.fromJson(new FileReader("repository.json"), Repository.class);
+            Repository repo = gson.fromJson(new FileReader("repository.json"), Repository.class);
+
+            if (repo == null) {
+                System.err.println("Błąd wczytywania");
+                return new Repository();
+            }
+
+            return repo;
         } catch (IOException e) {
-            System.err.println("Błąd zapisywania");
-            return null;
+            System.err.println("Błąd wczytywania");
+            return new Repository();
         }
     }
 
