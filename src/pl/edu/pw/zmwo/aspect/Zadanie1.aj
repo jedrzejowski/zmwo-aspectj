@@ -8,9 +8,9 @@ public aspect Zadanie1 {
 
     void log(long id, String format, Object... args) {
 
-        //System.out.println(
-        //        String.format("\t\t\t\t\t\t\t\t[%s] ", id) + String.format(format, args)
-        //);
+        System.out.println(
+                String.format("\t\t\t\t\t\t\t\t[%s] ", id) + String.format(format, args)
+        );
     }
 
     Object around(): everyMethod() {
