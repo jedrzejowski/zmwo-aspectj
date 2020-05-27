@@ -24,5 +24,17 @@ public class Main {
         ProjectExporter projectExporter = new ProjectExporter();
         projectExporter.export(project1, System.out);
         projectExporter.export(project1, System.out);
+
+        try {
+            Main.throwException();
+            System.out.println("no exception");
+        } catch (Exception e) {
+            System.out.println("exception thrown:" + e.getClass());
+        }
     }
+
+    static void throwException() throws Exception {
+        throw new Exception();
+    }
+
 }
