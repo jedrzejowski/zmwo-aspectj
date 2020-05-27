@@ -20,9 +20,9 @@ public class Main {
         project2.addTask(task3);
 
         repository.addProject(project1);
-        repository.addProject(project2);
 
         ProjectExporter projectExporter = new ProjectExporter();
+        projectExporter.export(project1, System.out);
         projectExporter.export(project1, System.out);
     }
 }

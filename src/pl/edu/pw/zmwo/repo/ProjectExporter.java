@@ -6,7 +6,7 @@ import java.util.List;
 public class ProjectExporter {
     public void export(Project project, PrintStream printStream) {
         printStream.println("Projekt: " + project.getName());
-        exportTasks(printStream, project.getTaks());
+        exportTasks(printStream, project.getTasks());
         exportDocuments(printStream, project.getDocuments());
     }
 

@@ -23,7 +23,8 @@ public class Project implements Serializable {
         return name;
     }
 
-    public List<Task> getTaks() {
+    public List<Task> getTasks() {
+        System.out.println("Executing:getTasks");
         return new LinkedList<Task>(tasks.values());
     }
 
@@ -44,6 +45,7 @@ public class Project implements Serializable {
     }
 
     public List<Document> getDocuments() {
+        System.out.println("Executing:getDocuments");
         return new LinkedList<Document>(documents.values());
     }
 
