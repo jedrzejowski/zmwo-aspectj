@@ -23,18 +23,13 @@ public class Main {
 
         ProjectExporter projectExporter = new ProjectExporter();
         projectExporter.export(project1, System.out);
+        project1.addTask(task2);
         projectExporter.export(project1, System.out);
 
-        try {
-            Main.throwException();
-            System.out.println("no exception");
-        } catch (Exception e) {
-            System.out.println("exception thrown:" + e.getClass());
-        }
+        Main.throwException();
     }
 
-    static void throwException() throws Exception {
+    static void throwException() {
         throw new Exception();
     }
-
 }

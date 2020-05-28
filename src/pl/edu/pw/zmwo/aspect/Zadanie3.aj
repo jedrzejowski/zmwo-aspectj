@@ -2,13 +2,9 @@ package pl.edu.pw.zmwo.aspect;
 
 import pl.edu.pw.zmwo.repo.Document;
 import pl.edu.pw.zmwo.repo.Project;
-import pl.edu.pw.zmwo.repo.Repository;
 import pl.edu.pw.zmwo.repo.Task;
 
-import java.lang.ref.WeakReference;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 public aspect Zadanie3 {
 

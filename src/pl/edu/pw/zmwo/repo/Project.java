@@ -24,7 +24,7 @@ public class Project implements Serializable {
     }
 
     public List<Task> getTasks() {
-        System.out.println("Executing:getTasks");
+        System.out.println("executing: Project.getTasks");
         return new LinkedList<Task>(tasks.values());
     }
 
@@ -45,7 +45,7 @@ public class Project implements Serializable {
     }
 
     public List<Document> getDocuments() {
-        System.out.println("Executing:getDocuments");
+        System.out.println("executing: Project.getDocuments");
         return new LinkedList<Document>(documents.values());
     }
 
